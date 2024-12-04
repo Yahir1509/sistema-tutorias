@@ -1,0 +1,16 @@
+# Archivos de configuración local
+*.sqlite3   # Base de datos SQLite
+*.pyc       # Archivos de caché de Python
+__pycache__/  # Caché de Python
+
+# Configuración de entorno
+.env        # Archivo con variables de entorno
+
+# Archivos y carpetas del sistema operativo
+.DS_Store   # MacOS
+Thumbs.db   # Windows
+
+# Archivos de editores y entornos de desarrollo
+.vscode/    # Configuración de Visual Studio Code
+.idea/      # Configuración de PyCharm o IntelliJ
+
