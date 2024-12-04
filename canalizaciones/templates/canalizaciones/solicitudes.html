@@ -1,0 +1,26 @@
+{% extends 'canalizaciones/base.html' %}
+
+{% block content %}
+<h1 class="my-4">Lista de Solicitudes</h1>
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Alumno</th>
+            <th>Tipo</th>
+            <th>Descripción</th>
+            <th>Fecha</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for solicitud in solicitudes %}
+        <tr>
+            <td>{{ solicitud.alumno }}</td>
+            <td>{{ solicitud.tipo }}</td>
+            <td>{{ solicitud.descripcion }}</td>
+            <td>{{ solicitud.fecha }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<a href="{% url 'crear_solicitud' %}" class="btn btn-primary">Crear Nueva Solicitud</a>
+{% endblock %}

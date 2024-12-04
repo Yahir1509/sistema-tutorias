@@ -1,0 +1,29 @@
+{% extends 'canalizaciones/base.html' %}
+{% load widget_tweaks %}
+{% block content %}
+<h1 class="my-4 text-center">Crear Nueva Solicitud</h1>
+<div class="card shadow-sm p-4">
+    <form method="post">
+        {% csrf_token %}
+        <!-- Campo Alumno -->
+        <div class="mb-3">
+            <label for="id_alumno" class="form-label"><strong>Alumno</strong></label>
+            {{ form.alumno|add_class:"form-control" }}
+        </div>
+        <!-- Campo Tipo -->
+        <div class="mb-3">
+            <label for="id_tipo" class="form-label"><strong>Tipo de Canalización</strong></label>
+            {{ form.tipo|add_class:"form-select" }}
+        </div>
+        <!-- Campo Descripción -->
+        <div class="mb-3">
+            <label for="id_descripcion" class="form-label"><strong>Descripción</strong></label>
+            {{ form.descripcion|add_class:"form-control" }}
+        </div>
+        <!-- Botón de Enviar -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary w-100">Guardar Solicitud</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
